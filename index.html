@@ -44,15 +44,16 @@ $.cookie('lan', lan);
 
 /* 获取 cookie */
 var current_lan = $.cookie('lan');
-alert(current_lan);
+
 
 // if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
 if (current_lan == 'EN' ){
-  alert("here!");
-  $(".lan-en").css("background","#666");
-  $(".lan-en").css("display","block !important");
+
+  //$(".lan-en").css("display","block !important");
+  $(".lan-en").addClass("show");
   alert("here2!");
-  $(".lan-zh").css("display","none !important");
+  //(".lan-zh").css("display","none !important");
+  $(".lan-zh").addClass("hide");
   alert("here3!");
   // document.getElementsByClassName("lan-en").style.display="";
   // document.getElementsByClassName("lan-zh").style.display="none";
@@ -60,8 +61,8 @@ if (current_lan == 'EN' ){
 else {
   $(".lan-en").css("display","none !important");
   $(".lan-zh").css("display","inline !important");
-  // document.getElementByClassName("lan-en").style.display="none";
-  // document.getElementByClassName("lan-zh").style.display="";
+  // document.getElementsByClassName("lan-en").style.display="none";
+  // document.getElementsByClassName("lan-zh").style.display="";
 
 }
 

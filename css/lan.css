@@ -19,5 +19,11 @@
 
 }
 .lan-zh{
-  
+
+}
+.show{
+  display: inline !important;
+}
+.hide{
+  display: none !important;
 }
