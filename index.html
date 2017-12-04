@@ -39,28 +39,18 @@ var lan = getUrlParameter('lan');
 
 /* 设置 cookie */
 document.cookie="lan="+lan;
-$("lan_ZH").show();
-$("lan_EN").hide();
-
 /* 获取 cookie */
 var current_lan = $.cookie('lan');
 if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
-  $("lan_ZH").show();
-  $("lan_EN").hide();
+
   //$(".lan-en").show();
   //$(".lan-zh").hide();
-  //document.getElementById("lan_EN").style.display="none";
-  //document.getElementById("lan_ZH").style.display="inline-block";
-  //document.getElementsByClassName("lan-en").style.display="inline";
-  //document.getElementsByClassName("lan-zh").style.display="none";
+  document.getElementsByClassName("lan-en").style.display="";
+  document.getElementsByClassName("lan-zh").style.display="none";
 }
 else {
-  //document.getElementById("lan_EN").style.display="inline-block";
-  //document.getElementById("lan_ZH").style.display="none";
-  //document.getElementByClassName("lan-en").style.display="none";
-  //document.getElementByClassName("lan-zh").style.display="inline";
-  $("lan_ZH").hide();
-  $("lan_EN").show();
+  document.getElementByClassName("lan-en").style.display="none";
+  document.getElementByClassName("lan-zh").style.display="";
   //$(".lan-en").hide();
   //$(".lan-zh").show();
 }
@@ -120,8 +110,8 @@ else {
                   </a>
                 </li> -->
                 <li>
-                  <a id="lan_EN" class="lan" href="http://cczhao.top/?lan=EN" style="">EN</a>
-                  <a id="lan_ZH" class="lan" href="http://cczhao.top/?lan=ZH" style="">中文</a>
+                  <a class="lan lan-zh" href="http://cczhao.top/?lan=EN" style="">EN</a>
+                  <a class="lan lan-en" href="http://cczhao.top/?lan=ZH" style="">中文</a>
                 </li>
                 <script>
 
