@@ -727,7 +727,9 @@ nav .link-title:last-child {
 
 nav {
   float: left;
-  width: 30%; }
+  width: 30%;
+position: absolute;
+}
   nav .gallery-title a {
     color: #282828;
     font-family: ftnk;
