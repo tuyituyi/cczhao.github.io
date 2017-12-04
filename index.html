@@ -33,6 +33,15 @@ function getUrlParameter(sParam){
         }
     }
 }
+
+/* 获取 lan 参数 */
+var lan = getUrlParameter('lan');
+
+/* 设置 cookie */
+//document.cookie = 'lan='+lan;
+$.cookie('lan', lan);
+
+
 </script>
 
 
@@ -142,7 +151,7 @@ function getUrlParameter(sParam){
                 <div class="details">
                   <div class="details-inner lan-zh">
                       <div class="title">SketchBook</div>
-                      <div id="textid" class="description">Autodesk 公司旗下一款数字绘画软件</div>
+                      <div class="description">Autodesk 公司旗下一款数字绘画软件</div>
                       <div class="custom1">多平台</div>
                       <div class="custom2">2015 - 2017</div>
                   </div>
@@ -421,13 +430,6 @@ function getUrlParameter(sParam){
     if (e.persisted) { window.location.reload(); }
   };
 
-
-  /* 获取 lan 参数 */
-  var lan = getUrlParameter('lan');
-
-  /* 设置 cookie */
-  //document.cookie = 'lan='+lan;
-  $.cookie('lan', lan);
 
 
   /* 获取 cookie */
