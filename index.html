@@ -43,7 +43,7 @@ document.cookie="lan="+lan;
 
 /* 获取 cookie */
 var current_lan = $.cookie('lan');
-if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
+if (lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
   $("lan_ZH").show();
   $("lan_EN").hide();
   $(".lan-en").show();
