@@ -786,7 +786,11 @@ nav {
       font-weight: 400; }
 
 .nav-social {
-  text-align: right; }
+  text-align: right;
+  position: absolute;
+  right: 0;
+  padding-right: 5%;
+    }
   .nav-social li {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -1080,7 +1084,7 @@ nav {
   display: none;
   padding: 30px 5%;
   position: absolute;
-  right: 0;
+  left: 0;
   -webkit-tap-highlight-color: transparent;
   top: 50%; }
 
@@ -1263,7 +1267,8 @@ nav {
 
 @media (max-width: 768px) {
   .site-header .nav-social {
-    display: none; }
+    /*display: none; */
+  }
   .site-header.on-scroll .hamburger i {
     background-color: #282828; }
   .responsive-nav,
