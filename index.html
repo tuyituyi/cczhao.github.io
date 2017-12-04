@@ -33,41 +33,9 @@ function getUrlParameter(sParam){
         }
     }
 }
-
-/* 获取 lan 参数 */
-var lan = getUrlParameter('lan');
-
-/* 设置 cookie */
-//document.cookie = 'lan='+lan;
-$.cookie('lan', lan);
-
-
-/* 获取 cookie */
-var current_lan = $.cookie('lan');
-
-
-// if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
-if (current_lan == 'EN' ){
-
-  //$(".lan-en").css("display","block !important");
-  $(".lan-en").addClass("show");
-  alert("here2!");
-  //(".lan-zh").css("display","none !important");
-  $(".lan-zh").addClass("hide");
-  $(".lan-zh").style.display = 'none'; 
-  alert("here3!");
-  // document.getElementsByClassName("lan-en").style.display="";
-  // document.getElementsByClassName("lan-zh").style.display="none";
-}
-else {
-  $(".lan-en").css("display","none !important");
-  $(".lan-zh").css("display","inline !important");
-  // document.getElementsByClassName("lan-en").style.display="none";
-  // document.getElementsByClassName("lan-zh").style.display="";
-
-}
-
 </script>
+
+
 
 
       <body class="link-transition disable-download"><div class="js-responsive-nav">
@@ -174,7 +142,7 @@ else {
                 <div class="details">
                   <div class="details-inner lan-zh">
                       <div class="title">SketchBook</div>
-                      <div class="description">Autodesk 公司旗下一款数字绘画软件</div>
+                      <div id="textid" class="description">Autodesk 公司旗下一款数字绘画软件</div>
                       <div class="custom1">多平台</div>
                       <div class="custom2">2015 - 2017</div>
                   </div>
@@ -452,6 +420,32 @@ else {
   window.onpageshow = function(e) {
     if (e.persisted) { window.location.reload(); }
   };
+
+
+  /* 获取 lan 参数 */
+  var lan = getUrlParameter('lan');
+
+  /* 设置 cookie */
+  //document.cookie = 'lan='+lan;
+  $.cookie('lan', lan);
+
+
+  /* 获取 cookie */
+  var current_lan = $.cookie('lan');
+
+
+  // if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
+  if (current_lan == 'EN' ){
+    $(".lan-en").css("display","");
+    $(".lan-zh").css("display","block");
+
+  }
+  else {
+    $(".lan-en").css("display","none");
+    $(".lan-zh").css("display","");
+
+  }
+
 </script>
   <script type="text/javascript" src="js/O_0pn7OhziH_eBD8U8Cw8nbQbnynV6wdEi3diSAX63CfezvgfHYEBsJzwD9oFDIDWDZqwQFKZ2JuFhjoF2So5eZcFRIoZes85ejXwDFyZR4yjcsqF2BKwRj-LKG0jhFE-eBzO1szSf37OcuoSeNkieZzde8zOcFzdP37O1gkdDJlic88ikolpWgzS1scdhUTdkoRdhXCjhFE-eBzO1szSfUlpWgzS1scdhUTdkoRdhXCSY4zwKuh-AmaOcuo.js"></script>
   <script type="text/javascript">var __config__ = {"page_id":"p5760b37147fad92586f85af1c387258e1783373d2aba016686ccf","theme":{"name":"marta"},"pageTransition":true,"linkTransition":true,"disableDownload":true,"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}}};</script>
