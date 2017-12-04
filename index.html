@@ -43,16 +43,16 @@ document.cookie="lan="+lan;
 var current_lan = $.cookie('lan');
 if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
 
-  //$(".lan-en").show();
-  //$(".lan-zh").hide();
-  document.getElementsByClassName("lan-en").style.display="";
-  document.getElementsByClassName("lan-zh").style.display="none";
+  ​$(".lan-en").css("display​​​​​​​"​​​​​​​​​​​​,"");​​​​​​
+  $(".lan-zh").css("display​​​​​​​"​​​​​​​​​​​​,"none");​​​​​​
+  //document.getElementsByClassName("lan-en").style.display="";
+  //document.getElementsByClassName("lan-zh").style.display="none";
 }
 else {
-  document.getElementByClassName("lan-en").style.display="none";
-  document.getElementByClassName("lan-zh").style.display="";
-  //$(".lan-en").hide();
-  //$(".lan-zh").show();
+  $(".lan-zh").css("display​​​​​​​"​​​​​​​​​​​​,"");​​​​​​
+  $(".lan-en").css("display​​​​​​​"​​​​​​​​​​​​,"none");​​​​​​
+  //document.getElementByClassName("lan-en").style.display="none";
+  //document.getElementByClassName("lan-zh").style.display="";
 }
 
 </script>
