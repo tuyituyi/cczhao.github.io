@@ -39,6 +39,19 @@ var lan = getUrlParameter('lan');
 
 /* 设置 cookie */
 document.cookie="lan="+lan;
+
+
+/* 获取 cookie */
+var current_lan = $.cookie('lan');
+if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
+  document.getElementById("lan_EN").style.display="none";
+  document.getElementById("lan_ZH").style.display="inline-block";
+}
+else {
+  document.getElementById("lan_EN").style.display="inline-block";
+  document.getElementById("lan_ZH").style.display="none";
+}
+
 </script>
 
 
@@ -98,16 +111,7 @@ document.cookie="lan="+lan;
                   <a id="lan_ZH" class="lan" href="http://cczhao.top/?lan=ZH" style="display:none;">中文</a>
                 </li>
                 <script>
-                /* 获取 cookie */
-                var current_lan = $.cookie('lan');
-                if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
-                  document.getElementById("lan_EN").style.display="none";
-                  document.getElementById("lan_ZH").style.display="inline-block";
-                }
-                else {
-                  document.getElementById("lan_EN").style.display="inline-block";
-                  document.getElementById("lan_ZH").style.display="none";
-                }
+
                 </script>
 
         </ul>
