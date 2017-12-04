@@ -44,16 +44,24 @@ document.cookie="lan="+lan;
 /* 获取 cookie */
 var current_lan = $.cookie('lan');
 if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
-  document.getElementById("lan_EN").style.display="none";
-  document.getElementById("lan_ZH").style.display="inline-block";
-  document.getElementByClass("lan-en").style.display="none";
-  document.getElementByClass("lan-zh").style.display="inline";
+  $("lan_ZH").show();
+  $("lan_EN").hide();
+  $(".lan-en").show();
+  $(".lan-zh").hide();
+  //document.getElementById("lan_EN").style.display="none";
+  //document.getElementById("lan_ZH").style.display="inline-block";
+  //document.getElementByClass("lan-en").style.display="inline";
+  //document.getElementByClass("lan-zh").style.display="none";
 }
 else {
-  document.getElementById("lan_EN").style.display="inline-block";
-  document.getElementById("lan_ZH").style.display="none";
-  document.getElementByClass("lan-en").style.display="inline";
-  document.getElementByClass("lan-zh").style.display="none";
+  //document.getElementById("lan_EN").style.display="inline-block";
+  //document.getElementById("lan_ZH").style.display="none";
+  //document.getElementByClass("lan-en").style.display="none";
+  //document.getElementByClass("lan-zh").style.display="inline";
+  $("lan_ZH").hide();
+  $("lan_EN").show();
+  $(".lan-en").hide();
+  $(".lan-zh").show();
 }
 
 </script>
