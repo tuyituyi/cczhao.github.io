@@ -46,10 +46,14 @@ var current_lan = $.cookie('lan');
 if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
   document.getElementById("lan_EN").style.display="none";
   document.getElementById("lan_ZH").style.display="inline-block";
+  document.getElementByClass("lan-en").style.display="none";
+  document.getElementByClass("lan-zh").style.display="inline";
 }
 else {
   document.getElementById("lan_EN").style.display="inline-block";
   document.getElementById("lan_ZH").style.display="none";
+  document.getElementByClass("lan-en").style.display="inline";
+  document.getElementByClass("lan-zh").style.display="none";
 }
 
 </script>
@@ -157,10 +161,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">SketchBook</div>
                       <div class="description">Autodesk 公司旗下一款数字绘画软件</div>
                       <div class="custom1">多平台</div>
+                      <div class="custom2">2015 - 2017</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">SketchBook</div>
+                      <div class="description">a digital drawing app, Autodesk</div>
+                      <div class="custom1">across-platform</div>
                       <div class="custom2">2015 - 2017</div>
                   </div>
                 </div>
@@ -183,10 +193,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">Pixlr 3.0</div>
                       <div class="description">曾是 Autodesk 公司旗下的一款照片处理 App</div>
-                      <div class="custom1">用户体验设计, 移动端</div>
+                      <div class="custom1">用户体验设计，移动端</div>
+                      <div class="custom2">2015</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">Pixlr 3.0</div>
+                      <div class="description">a photo editing app, Autodesk</div>
+                      <div class="custom1">UX design, mobile</div>
                       <div class="custom2">2015</div>
                   </div>
                 </div>
@@ -205,10 +221,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">SketchBook 服务</div>
                       <div class="description"></div>
                       <div class="custom1">网页设计，UX/UI</div>
+                      <div class="custom2">2016</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">SketchBook Service</div>
+                      <div class="description"></div>
+                      <div class="custom1">web design, UX/UI</div>
                       <div class="custom2">2016</div>
                   </div>
                 </div>
@@ -231,10 +253,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">CANARY（金丝雀）</div>
                       <div class="description">正在进行的项目</div>
                       <div class="custom1">跨平台</div>
+                      <div class="custom2">2017</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">CANARY</div>
+                      <div class="description">on-going project</div>
+                      <div class="custom1">across-platform</div>
                       <div class="custom2">2017</div>
                   </div>
                 </div>
@@ -253,10 +281,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">AR Motion</div>
                       <div class="description">团队竞赛项目</div>
                       <div class="custom1">ARkit，iOS</div>
+                      <div class="custom2">2017</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">AR Motion</div>
+                      <div class="description">Hackathon project</div>
+                      <div class="custom1">ARkit, iOS</div>
                       <div class="custom2">2017</div>
                   </div>
                 </div>
@@ -275,10 +309,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">ARuler 爱鹿测量</div>
                       <div class="description">一款基于 ARKit 的 AR 测量工具</div>
                       <div class="custom1">iOS，UX/UI</div>
+                      <div class="custom2">2017</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">ARuler</div>
+                      <div class="description">a measuring tool with ARKit</div>
+                      <div class="custom1">iOS, UX/UI</div>
                       <div class="custom2">2017</div>
                   </div>
                 </div>
@@ -297,10 +337,16 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">Mr. Mirror</div>
                       <div class="description">设计稿管理工具</div>
                       <div class="custom1">交互设计，网页设计</div>
+                      <div class="custom2">2014</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">Mr. Mirror</div>
+                      <div class="description">design management tool</div>
+                      <div class="custom1">web design, UX/UI</div>
                       <div class="custom2">2014</div>
                   </div>
                 </div>
@@ -319,9 +365,15 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">跑调</div>
-                      <div class="description">——基于音乐引导的运动 App </div>
+                      <div class="description">基于音乐引导的运动 App </div>
+
+                      <div class="custom2">2013</div>
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">Paodiao</div>
+                      <div class="description">a music app for running</div>
 
                       <div class="custom2">2013</div>
                   </div>
@@ -341,8 +393,14 @@ else {
               </div>
               <div class="details-wrap">
                 <div class="details">
-                  <div class="details-inner">
+                  <div class="details-inner lan-zh">
                       <div class="title">其他</div>
+                      <div class="description"></div>
+
+
+                  </div>
+                  <div class="details-inner lan-en">
+                      <div class="title">Others</div>
                       <div class="description"></div>
 
 
