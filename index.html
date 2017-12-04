@@ -49,14 +49,16 @@ alert(current_lan);
 // if (current_lan == 'EN' || 'en' || 'US' || 'us' || 'en-us'){
 if (current_lan == 'EN' ){
   alert("here!");
-  $(".lan-en").css("display","inline");
-  $(".lan-zh").css("display","none");
+  $(".lan-en").css("display","inline !important");
+  alert("here2!");
+  $(".lan-zh").css("display","none !important");
+  alert("here3!");
   // document.getElementsByClassName("lan-en").style.display="";
   // document.getElementsByClassName("lan-zh").style.display="none";
 }
 else {
-  $(".lan-en").css("display","none");
-  $(".lan-zh").css("display","inline");
+  $(".lan-en").css("display","none !important");
+  $(".lan-zh").css("display","inline !important");
   // document.getElementByClassName("lan-en").style.display="none";
   // document.getElementByClassName("lan-zh").style.display="";
 
