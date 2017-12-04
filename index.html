@@ -17,9 +17,7 @@
 <style type="text/css">@font-face{font-family:fbft;src:url(https://use.typekit.net/af/cc8441/0000000000000000000118b1/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/cc8441/0000000000000000000118b1/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/cc8441/0000000000000000000118b1/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/5da6f6/000000000000000000010096/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/5da6f6/000000000000000000010096/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/5da6f6/000000000000000000010096/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/3489f3/000000000000000000013365/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/3489f3/000000000000000000013365/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/3489f3/000000000000000000013365/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/069586/00000000000000000001008f/27/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/069586/00000000000000000001008f/27/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/069586/00000000000000000001008f/27/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/e9d809/000000000000000000010091/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e9d809/000000000000000000010091/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e9d809/000000000000000000010091/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}</style><style type="text/css"></style></head>
 <script>
 
-/**
- * 获取url 上的 get 参数
- */
+/* 获取url 上的 get 参数*/
 function getUrlParameter(sParam){
 
     var sPageURL = window.location.search.substring(1);
@@ -32,10 +30,23 @@ function getUrlParameter(sParam){
     }
 }
 
-/* 使用示例 */
+/* 获取 lan 参数 */
 var lan = getUrlParameter('lan');
-/* set cookie */
+
+/* 设置 cookie */
 document.cookie="lan="+lan;
+
+/* 获取 cookie */
+var current_lan = $.cookie('lan');
+if (current_lan = "EN"){
+  document.getElementById("lan_EN").style.display="none";
+  document.getElementById("lan_ZH").style.display="inline-box";
+}
+else {
+  document.getElementById("lan_EN").style.display="inline-box";
+  document.getElementById("lan_ZH").style.display="none";
+}
+
 </script>
 
 
@@ -62,6 +73,9 @@ document.cookie="lan="+lan;
                     </svg>
                   </a>
                 </li>
+                <li>
+                  <a class="lan" href="cczhao.top/?lan=en">EN</a>
+                </li>
         </ul>
       </div>
   </div>
@@ -81,7 +95,7 @@ document.cookie="lan="+lan;
       </div>
       <div class="social nav-social js-editable-target editable" data-context="theme.nav">
         <ul>
-                <li>
+                <!-- <li>
                   <a href="https://www.linkedin.com/in/%E7%BA%AF%E6%BE%84-%E8%B5%B5-633333152/" target="_blank">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon icon-linkedin">
                     <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
@@ -89,6 +103,10 @@ document.cookie="lan="+lan;
                       C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"></path>
                     </svg>
                   </a>
+                </li> -->
+                <li>
+                  <a id="lan_EN" class="lan" href="http://cczhao.top/?lan=EN" style="display: inline-block;">EN</a>
+                  <a id="lan_ZH" class="lan" href="http://cczhao.top/?lan=ZH" style="display: none;">中文</a>
                 </li>
         </ul>
       </div>
