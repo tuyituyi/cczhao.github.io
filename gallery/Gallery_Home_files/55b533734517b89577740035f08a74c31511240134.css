@@ -1080,7 +1080,7 @@ nav {
   display: none;
   padding: 30px 5%;
   position: absolute;
-  right: 0;
+  left: 0;
   -webkit-tap-highlight-color: transparent;
   top: 50%; }
 
